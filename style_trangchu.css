@@ -1,0 +1,25 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+@media (max-width: 992px) {
+    .hide-on-mobile {
+      display: none;
+    }
+}
+.nav2 li{
+    margin-right: 40px;
+}
+.nav1 li {
+    border-right: 1px solid gray; 
+    padding-right: 20px; 
+    padding-left: 20px;
+}
+.nav1 li:last-child {
+    border-right: none; 
+}
+.my_line{
+    border: none;
+    border-top: 3px double #000000;
+    margin: 20px 0;
+}

@@ -1,0 +1,19 @@
+.error-msg {
+
+    color: red;
+    text-align: center;
+
+}
+.success-msg {
+
+    color: green;
+    text-align: center;
+
+}
+
+
+.btn-logout {
+    border: none;
+    background-color: #fff;
+    color: rgba(0, 0, 0, 0.55);
+}
