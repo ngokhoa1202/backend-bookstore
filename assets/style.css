@@ -11,6 +11,9 @@
 
 }
 
+.row.gutter-0 {
+    margin: 0;
+}
 
 .btn-logout {
     border: none;

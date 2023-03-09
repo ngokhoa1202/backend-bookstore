@@ -1,118 +1,9 @@
-<?php
 
+<?php
 session_start();
 
+require('header.php')
 ?>
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="style_trangchu.css">
-
-    <style>
-        .row.gutter-0 {
-            margin: 0;
-        }
-        
-        .btn-logout {
-            border: none;
-            background-color: #fff;
-            color: rgba(0, 0, 0, 0.55);
-        }
-
-   
-    </style>
-    <title>Trang Chủ</title>
-</head>
-<body>
-    <nav class="navbar navbar-expand-md navbar-light nav1">
-        <div class="container">
-            <a href="#" class="navbar-brand">
-                <img src="images/logo.png" alt="logo" style="width: 200px;">
-            </a>
-            <div class="navbar-collapse">
-                <ul class="navbar-nav">
-                    <li>
-                        <a href="#" class="nav-link">
-                            <img 
-                                src="images/hotline.png" alt="hotline"
-                                style="width: 15px; padding-bottom: 5px;"
-                            >
-                            1900 1000
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="nav-link">
-                            <img 
-                                src="images/search.png" alt="search"
-                                style="width: 15px; padding-bottom: 2px;"
-                            >
-                            Tìm kiếm
-                        </a>
-                    </li>
-                    <?php
-                    if (!isset($_SESSION['userId'])) {
-
-                       echo '
-                       <li>
-                        <a href="login.php" class="nav-link">
-                            <img 
-                                src="images/user.png" alt="user"
-                                style="width: 18px; padding-bottom: 2px;" 
-                            >
-                            Đăng nhập
-                        </a>
-                    </li>
-                    
-                    <li>
-                        <a href="signup.php" class="nav-link">
-                            <img 
-                                src="images/register.png" alt="register"
-                                style="width: 15px; padding-bottom: 2px;"
-                            >
-                            Đăng ký
-                        </a>
-                    </li>
-                   
-                       
-                       
-                       ';
-
-                    }
-
-                    else {
-                        echo ' <li>
-                        <a href="#" class="nav-link">
-                            <img 
-                            src="images/cart.png" alt="cart"
-                            style="width: 15px; padding-bottom: 4px;"
-                            >
-                            Giỏ hàng
-                        </a>
-                         </li>
-                        <li>
-                        <form action="includes/logout.inc.php" method="post">
-                            <a href="login.php" class="nav-link">
-                                
-                                <button type="submit" name="" class="btn-logout" >Logout</button>
-                            </a>
-                        </form>
-                        </li>
-                   ';
-                    }
-                   
-                    
-                    
-                    
-                    
-                    
-                    ?>
-                   
-                </ul>
-            </div>
-        </div>
-    </nav>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark nav2" style="height: 45px">
         <div class="container">
                 <div class="navbar-collapse">
@@ -353,23 +244,9 @@ session_start();
             </div>
         </div>
     </section>
+    <?php
 
-    <footer class="p-3 text-dark text-center mt-5" style="background-color: #e4d2ca;">
-        <div class="container">
-            <h5>Footer Information...</h5>
-            <ul class="nav justify-content-center">
-              <li class="nav-item">
-                <a class="nav-link" href="#" style="color:black;">Link 1</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#" style="color:black;">Link 2</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#" style="color:black;">Link 3</a>
-              </li>
-            </ul>
-        </div>
-    </footer>
-
+    require('footer.php')
+?>
 </body>
 </html>
