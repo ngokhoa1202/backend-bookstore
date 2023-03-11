@@ -40,13 +40,27 @@ require('header.php')
                         <h6 class="text-center">Đăng ký tài khoản</h6>
                         <?php
                         if (isset($_GET['error'])) {
-                            if($_GET['error'] == 'emptyfields') {
+                            if($_GET['error'] == 'emptyinput') {
                                 echo '<p class="error-msg"> Fill in all fields!</p>';
                             }
-                            else if ($_GET['error'] == 'usertaken') {
+
+                            else if ($_GET['error'] == 'invalidUsername') {
+                                echo '<p class="error-msg"> Invalid Username!</p>';
+                            }
+                            else if ($_GET['error'] == 'invalidEmail') {
+                                echo '<p class="error-msg"> Invalid Email!</p>';
+                            }
+                            else if ($_GET['error'] == 'invalidPhone') {
+                                echo '<p class="error-msg"> Invalid Phone Number!</p>';
+                            }
+                            else if ($_GET['error'] == 'invalidPassword') {
+                                echo '<p class="error-msg"> Invalid Password!</p>';
+                            }
+                            else if ($_GET['error'] == 'usernameExists') {
                                 echo '<p class="error-msg"> Username is exists!</p>';
-
-
+                            }
+                            else {
+                                echo '<p class="error-msg">Invalid information!</p>';
                             }
                             
                         }

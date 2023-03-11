@@ -74,7 +74,8 @@
                         </a>
                          </li>
                         <li>
-                        <form action="includes/logout.inc.php" method="post">
+                        <span>Hi '.$_SESSION['userUid'].',
+                        <form action="includes/logout.inc.php" method="post" style="display:inline-block">
                             <a href="login.php" class="nav-link">
                                 
                                 <button type="submit" name="" class="btn-logout" >Logout</button>

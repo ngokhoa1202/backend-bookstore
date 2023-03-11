@@ -43,6 +43,32 @@ require('header.php')
                 <div class="col-md-6">
                       <div class="row">
                         <h6 class="text-center">Đăng nhập tài khoản</h6>
+                        <?php
+                        if (isset($_GET['error'])) {
+                            if($_GET['error'] == 'wrongpassword') {
+                                echo '<p class="error-msg"> Wrong password!</p>';
+                            }
+                            else if ($_GET['error'] == 'nouser') {
+                                echo '<p class="error-msg"> Username is not exists!</p>';
+
+
+                            }
+                            echo '';
+
+
+
+                            
+                            
+                        }
+                        else if (isset($_GET['login'])) {
+                            if($_GET['login'] == 'success') {
+                                echo '<p class="success-msg"> Login successful!</p>';
+
+                            }
+                        }
+
+                        ?>
+
                         <form action="includes/login.inc.php" method="post">
                             <div class="form-group">
                               <label for="username" class="mb-2 mt-1">Tên đăng nhập:</label>
